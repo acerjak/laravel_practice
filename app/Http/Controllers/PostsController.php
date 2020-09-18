@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 //not in namespace but need to call the database
 use DB;
 use App\Http\Requests;
+//namespace had to be updated due to base branch not being App, but also within Models
 use App\Models\Post;
 
 class PostsController
