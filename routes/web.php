@@ -20,3 +20,8 @@ use App\Http\Controllers\PostsController;
 
 Route::get('/posts/{post}', [PostsController::class, 'show']);
 
+//get contact view blade when this slug is in the url
+Route::get('/contact', function () {
+    return view('contact');
+});
+
