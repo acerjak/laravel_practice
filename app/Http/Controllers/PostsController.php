@@ -16,10 +16,14 @@ class PostsController
         return view('post', [
             'post' => Post::where('slug', $slug)->firstOrFail()
         ]);
+
+        //this line was able to be inlined due to $post, like terms can be combined
             // $post = DB::table('posts')->where('slug', $slug)->first();
 
+        //to see what data is being sent back, always a good practice to use dump and die for quick assessment
             // dd($post);
 
+        //array of hard coded data
             // $posts = [
             //     'my-first-post' => 'Hello, this is my first post.',
             //     'my-second-post' => 'Hopefully I start to get the hang of things!'
