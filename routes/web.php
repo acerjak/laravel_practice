@@ -15,9 +15,13 @@ use App\Http\Controllers\ArticlesController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('post');
-// });
+//route to get the main page 
+Route::get('/', function () {
+    //obtain 3 of the latest articles
+    return view('home', [
+        'articles' => App\Models\Article::take(3)->latest()->get()
+    ]);
+});
 
 Route::get('/posts/{post}', [PostsController::class, 'show']);
 
