@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostsController;
+use App\Http\Controllers\ArticlesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,3 +26,5 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
+//get articles by id
+Route::get('/articles/{article}', [ArticlesController::class, 'show']);
