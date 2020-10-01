@@ -3,7 +3,7 @@
 @section('content')
     <div>
         <div class="container">
-            <h1>New Article</h1>
+            <h1>NEW ARTICLE</h1>
 
             <form method="POST" action="/articles">
             <!-- prevents malicious users on other servers from faking form requests on your server -->
