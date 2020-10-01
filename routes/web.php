@@ -22,7 +22,7 @@ Route::get('/', function () {
         'articles' => App\Models\Article::take(3)->latest()->get()
     ]);
 });
-
+//get posts by their id
 Route::get('/posts/{post}', [PostsController::class, 'show']);
 
 //get contact view blade when this slug is in the url
@@ -32,3 +32,10 @@ Route::get('/contact', function () {
 
 //get articles by id
 Route::get('/articles/{article}', [ArticlesController::class, 'show']);
+
+//get all articles for articles homepage
+Route::get('/articles', function() {
+    return view('articles', [
+        'articles' => App\Models\Article::latest()->get()
+    ]);
+});
