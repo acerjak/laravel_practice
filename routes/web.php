@@ -33,8 +33,11 @@ Route::get('/contact', function () {
 //get all articles for articles index
 Route::get('/articles', [ArticlesController::class, 'index']);
 
+//route to post/persist the new article to the database
+Route::post('/articles', [ArticlesController::class, 'store']);
+
 //route to create a new article
-Route::get('articles/create', [ArticlesController::class, 'create']);
+Route::get('/articles/create', [ArticlesController::class, 'create']);
 
 //get articles by id
 Route::get('/articles/{article}', [ArticlesController::class, 'show']);
