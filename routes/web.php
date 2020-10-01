@@ -41,3 +41,6 @@ Route::get('/articles/create', [ArticlesController::class, 'create']);
 
 //get articles by id
 Route::get('/articles/{article}', [ArticlesController::class, 'show']);
+
+//edit articles by id
+Route::get('/articles/{article}/edit', [ArticlesController::class, 'edit']);
