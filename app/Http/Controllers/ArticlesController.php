@@ -14,4 +14,12 @@ class ArticlesController extends Controller
 
         return view('articles.show', ['article' => $article]);
     }
+
+    //create function for index of articles
+    public function index()
+    {
+        $articles = Article::latest()->get();
+
+        return view('articles.index', ['articles' => $articles]);
+    }
 }
