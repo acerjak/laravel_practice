@@ -5,8 +5,9 @@
         <div class="container">
             <h1>New Article</h1>
 
-            <form action="">
-                
+            <form method="POST" action="/articles">
+            <!-- prevents malicious users on other servers from faking form requests on your server -->
+            @csrf
                 <div class="field">
                     <label class="label" for="title">Title</label>
 
@@ -28,6 +29,12 @@
                     
                     <div class="control">
                         <textarea class="textarea" name="body" id="body"></textarea>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <div class="control">
+                        <button class="button" type="submit">Submit</button>
                     </div>
                 </div>
 
