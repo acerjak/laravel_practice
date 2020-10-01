@@ -35,6 +35,9 @@ class ArticlesController extends Controller
     {
         //Persist the new resouce 
 
+        //use this function to ensure that we are hitting the correct method
+        die('hello');
+
     }
 
     public function edit()
