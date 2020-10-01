@@ -44,3 +44,6 @@ Route::get('/articles/{article}', [ArticlesController::class, 'show']);
 
 //edit articles by id
 Route::get('/articles/{article}/edit', [ArticlesController::class, 'edit']);
+
+//persist updated article to the database
+Route::put('articles/{article}', [ArticlesController::class, 'update']);
