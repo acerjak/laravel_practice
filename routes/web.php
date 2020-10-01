@@ -33,9 +33,5 @@ Route::get('/contact', function () {
 //get articles by id
 Route::get('/articles/{article}', [ArticlesController::class, 'show']);
 
-//get all articles for articles homepage
-Route::get('/articles', function() {
-    return view('articles', [
-        'articles' => App\Models\Article::latest()->get()
-    ]);
-});
+//get all articles for articles index
+Route::get('/articles', [ArticlesController::class, 'index']);
