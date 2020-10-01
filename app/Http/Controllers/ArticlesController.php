@@ -58,9 +58,17 @@ class ArticlesController extends Controller
 
     }
 
-    public function edit()
+    public function edit($id)
     {
         //Show a view to edit an existing resource
+        $article = Article::find($id);
+
+        //need to find the article associated with the id 
+        //one way to do this
+        // return view('articles.edit', ['article' => $article]);
+
+        //simpler way to do this with compact function
+        return view('articles.edit', compact('article'));
     }
 
     public function update()
