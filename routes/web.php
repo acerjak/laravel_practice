@@ -30,8 +30,11 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
-//get articles by id
-Route::get('/articles/{article}', [ArticlesController::class, 'show']);
-
 //get all articles for articles index
 Route::get('/articles', [ArticlesController::class, 'index']);
+
+//route to create a new article
+Route::get('articles/create', [ArticlesController::class, 'create']);
+
+//get articles by id
+Route::get('/articles/{article}', [ArticlesController::class, 'show']);
