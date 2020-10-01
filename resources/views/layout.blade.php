@@ -21,6 +21,22 @@
         </style>
     </head>
     <body class="antialiased">
+        <div>
+            <div>
+                <div>
+                    <h1>Welcome to Amanda's Blog!</h1>
+                </div>
+                <div id="menu">
+                    <ul>
+                        <li class="{{ Request::path() === '/' ? 'current_page_item' : '' }}"><a href="/" accesskey="1" title="">Home</a></li>
+                        <li class="{{ Request::path() === 'posts' ? 'current_page_item' : '' }}"><a href="/posts" accesskey="2" title="">Posts</a></li>
+                        <li class="{{ Request::path() === 'articles' ? 'current_page_item' : '' }}"><a href="/articles" accesskey="3" title="">Articles</a></li>
+                        <li class="{{ Request::path() === '/' ? 'current_page_item' : '' }}"><a href="#" accesskey="4" title="">About Me</a></li>
+                        <li class="{{ Request::path() === '/' ? 'current_page_item' : '' }}"><a href="#" accesskey="5" title="">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
             @yield ('content')
     </body>
 </html>
