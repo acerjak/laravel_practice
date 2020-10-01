@@ -5,9 +5,10 @@
         <div class="container">
             <h1>UPDATE ARTICLE</h1>
 
-            <form method="POST" action="/articles">
+            <form method="POST" action="/articles/{{ $article->id }}">
             <!-- prevents malicious users on other servers from faking form requests on your server -->
             @csrf
+            @method('PUT')
                 <div class="field">
                     <label class="label" for="title">Title</label>
 
