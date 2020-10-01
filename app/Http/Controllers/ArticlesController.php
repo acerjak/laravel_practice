@@ -35,8 +35,26 @@ class ArticlesController extends Controller
     {
         //Persist the new resouce 
 
+        //long way to persist data to database
+        //establish new article from model
+        $article = new Article();
+
+        //define parameters needed to make a new article
+        $article->title = request('title');
+        $article->excerpt = request('excerpt');
+        $article->body = request('body');
+
+        //save this article to the database
+        $article->save();
+
+        //redirect user to articles index
+        return redirect('/articles');
+
+        //use this funtion to ensure that we are receiving all the information we need before we persist to the database
+        // dump(request()->all());
+
         //use this function to ensure that we are hitting the correct method
-        die('hello');
+        // die('hello');
 
     }
 
