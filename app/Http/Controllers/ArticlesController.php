@@ -8,10 +8,10 @@ use App\Models\Article;
 class ArticlesController extends Controller
 {
     
-    public function show($id)
+    public function show(Article $article)
     {
         //Render a list of a resource
-        $article = Article::findOrFail($id);
+        // $article = Article::findOrFail($id);
 
         return view('articles.show', ['article' => $article]);
     }
@@ -58,10 +58,10 @@ class ArticlesController extends Controller
 
     }
 
-    public function edit($id)
+    public function edit(Article $article)
     {
         //Show a view to edit an existing resource
-        $article = Article::findOrFail($id);
+        // $article = Article::findOrFail($id);
 
         //need to find the article associated with the id 
         //one way to do this
@@ -71,10 +71,10 @@ class ArticlesController extends Controller
         return view('articles.edit', compact('article'));
     }
 
-    public function update($id)
+    public function update(Article $article)
     {
         //Persist the edited resource
-        $article = Article::findOrFail($id);
+        // $article = Article::findOrFail($id);
 
         //define parameters needed to make a new article
         $article->title = request('title');
