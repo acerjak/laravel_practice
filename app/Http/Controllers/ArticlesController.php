@@ -11,7 +11,7 @@ class ArticlesController extends Controller
     public function show($id)
     {
         //Render a list of a resource
-        $article = Article::find($id);
+        $article = Article::findOrFail($id);
 
         return view('articles.show', ['article' => $article]);
     }
@@ -61,7 +61,7 @@ class ArticlesController extends Controller
     public function edit($id)
     {
         //Show a view to edit an existing resource
-        $article = Article::find($id);
+        $article = Article::findOrFail($id);
 
         //need to find the article associated with the id 
         //one way to do this
@@ -74,7 +74,7 @@ class ArticlesController extends Controller
     public function update($id)
     {
         //Persist the edited resource
-        $article = Article::find($id);
+        $article = Article::findOrFail($id);
 
         //define parameters needed to make a new article
         $article->title = request('title');
