@@ -35,17 +35,30 @@ class ArticlesController extends Controller
     {
         //Persist the new resouce 
 
+        //validate the data coming through is there
+        request()->validate([
+            'title' => 'required',
+            'excerpt' => 'required',
+            'body' => 'required'
+        ]);
+
+        Article::create([
+            'title' => request('title'),
+            'excerpt' => request('excerpt'),
+            'body' => request('body')
+        ]);
+
         //long way to persist data to database
         //establish new article from model
-        $article = new Article();
+        // $article = new Article();
 
-        //define parameters needed to make a new article
-        $article->title = request('title');
-        $article->excerpt = request('excerpt');
-        $article->body = request('body');
+        // //define parameters needed to make a new article
+        // $article->title = request('title');
+        // $article->excerpt = request('excerpt');
+        // $article->body = request('body');
 
-        //save this article to the database
-        $article->save();
+        // //save this article to the database
+        // $article->save();
 
         //redirect user to articles index
         return redirect('/articles');
@@ -75,6 +88,13 @@ class ArticlesController extends Controller
     {
         //Persist the edited resource
         // $article = Article::findOrFail($id);
+
+        //validate the data coming through is there
+        request()->validate([
+            'title' => 'required',
+            'excerpt' => 'required',
+            'body' => 'required'
+        ]);
 
         //define parameters needed to make a new article
         $article->title = request('title');
