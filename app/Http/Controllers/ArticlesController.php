@@ -35,18 +35,23 @@ class ArticlesController extends Controller
     {
         //Persist the new resouce 
 
-        //validate the data coming through is there
-        request()->validate([
-            'title' => 'required',
-            'excerpt' => 'required',
-            'body' => 'required'
-        ]);
+        //short way to inline validation and create request
+        //even further since this same validation is done for the update method, 
+        //we can make a function to simplify the code
+        Article::create($this->validateArticle());
 
-        Article::create([
-            'title' => request('title'),
-            'excerpt' => request('excerpt'),
-            'body' => request('body')
-        ]);
+        //validate the data coming through is there
+        // request()->validate([
+        //     'title' => 'required',
+        //     'excerpt' => 'required',
+        //     'body' => 'required'
+        // ]);
+
+        // Article::create([
+        //     'title' => request('title'),
+        //     'excerpt' => request('excerpt'),
+        //     'body' => request('body')
+        // ]);
 
         //long way to persist data to database
         //establish new article from model
@@ -87,22 +92,20 @@ class ArticlesController extends Controller
     public function update(Article $article)
     {
         //Persist the edited resource
-        // $article = Article::findOrFail($id);
 
         //validate the data coming through is there
-        request()->validate([
-            'title' => 'required',
-            'excerpt' => 'required',
-            'body' => 'required'
-        ]);
+        $article->update($this->validateArticle());
 
-        //define parameters needed to make a new article
-        $article->title = request('title');
-        $article->excerpt = request('excerpt');
-        $article->body = request('body');
+        //long way to update an article
+        // $article = Article::findOrFail($id);
         
-        //save this article to the database
-        $article->save();
+        //define parameters needed to make a new article  
+        // $article->title = request('title');
+        // $article->excerpt = request('excerpt');
+        // $article->body = request('body');
+        
+        // //save this article to the database
+        // $article->save();
         
         //redirect user to articles index
         return redirect('/articles/' . $article->id);
@@ -111,5 +114,14 @@ class ArticlesController extends Controller
     public function destroy()
     {
         //Delete the resouce
+    }
+
+    public function validateArticle()
+    {
+        return request()->validate([
+            'title' => 'required',
+            'excerpt' => 'required',
+            'body' => 'required'
+        ]);
     }
 }
