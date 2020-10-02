@@ -12,6 +12,9 @@ class Article extends Model
 
     //if you want to be in charge of what is passed to the database and to not 'guard' anything
     //protected $guarded = []
-
+    public function path()
+    {
+        return route('articles.show', $this);
+    }
     // use HasFactory;
 }
