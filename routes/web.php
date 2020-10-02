@@ -31,7 +31,7 @@ Route::get('/contact', function () {
 });
 
 //get all articles for articles index
-Route::get('/articles', [ArticlesController::class, 'index']);
+Route::get('/articles', [ArticlesController::class, 'index'])->name('articles.index');
 
 //route to post/persist the new article to the database
 Route::post('/articles', [ArticlesController::class, 'store']);
@@ -40,7 +40,7 @@ Route::post('/articles', [ArticlesController::class, 'store']);
 Route::get('/articles/create', [ArticlesController::class, 'create']);
 
 //get articles by id
-Route::get('/articles/{article}', [ArticlesController::class, 'show']);
+Route::get('/articles/{article}', [ArticlesController::class, 'show'])->name('articles.show');
 
 //edit articles by id
 Route::get('/articles/{article}/edit', [ArticlesController::class, 'edit']);
