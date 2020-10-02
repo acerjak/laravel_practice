@@ -66,7 +66,7 @@ class ArticlesController extends Controller
         // $article->save();
 
         //redirect user to articles index
-        return redirect('/articles');
+        return redirect(route('articles.index'));
 
         //use this funtion to ensure that we are receiving all the information we need before we persist to the database
         // dump(request()->all());
@@ -108,7 +108,7 @@ class ArticlesController extends Controller
         // $article->save();
         
         //redirect user to articles index
-        return redirect('/articles/' . $article->id);
+        return redirect($article->path());
     }
 
     public function destroy()
