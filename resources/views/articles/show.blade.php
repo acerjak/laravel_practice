@@ -6,12 +6,12 @@
     <title>Document</title>
 </head>
 <body>
-<div class="container">
-    <div>
+<div class="wrapper">
+    <div class="container">
         <div>
-            <h2>Welcome to our website!</h2>
+            <h2 class="title">Welcome to our website!</h2>
         </div>
-            <div id="menu">
+            <div id="menu content">
                 <ul>
                     <li class="{{ Request::path() === '/' ? 'current_page_item' : '' }}"><a href="/" accesskey="1" title="">Home</a></li>
                     <li class="{{ Request::path() === 'posts' ? 'current_page_item' : '' }}"><a href="/posts" accesskey="2" title="">Posts</a></li>
@@ -25,7 +25,14 @@
             <div>
                 <h2>{{ $article->title }}</h2>
             </div>
+
                 <p>{{ $article->body }}</p>
+                <p>
+                    @foreach ($article->tags as $tag)
+                        <a href="{{ route('articles.index', ['tag' => $tag->name]) }}">{{ $tag->name }}</a>
+                    @endforeach
+                </p>
+
         </div>
     </div>
 </body>
