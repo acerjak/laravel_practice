@@ -21,6 +21,12 @@ class CreateArticlesTable extends Migration
             $table->text('excerpt');
             $table->text('body');
             $table->timestamps();
+
+            //syntax for a foreign key of User on an Article
+            $table->foreign('user_id')
+                ->references('id')
+                ->on('users')
+                ->onDelete('cascade');
         });
     }
 
