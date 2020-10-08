@@ -22,26 +22,22 @@
             }
         </style>
     </head>
-    <body class="antialiased">
+    <body class="antialiased">        
+
     <section class="section">
     <div class="container">
-        <div>        
-            <h1 class="title">Welcome to Amanda's Blog!</h1>
-        </div>
-        <div>
-            <div>
-                <div id="menu">
-                    <ul>
-                        <li class="{{ Request::path() === '/' ? 'current_page_item' : '' }}"><a href="/" accesskey="1" title="">Home</a></li>
-                        <li class="{{ Request::path() === 'posts' ? 'current_page_item' : '' }}"><a href="/posts" accesskey="2" title="">Posts</a></li>
-                        <li class="{{ Request::path() === 'articles' ? 'current_page_item' : '' }}"><a href="/articles" accesskey="3" title="">Articles</a></li>
-                        <li class="{{ Request::path() === '/' ? 'current_page_item' : '' }}"><a href="#" accesskey="4" title="">About Me</a></li>
-                        <li class="{{ Request::path() === 'contact' ? 'current_page_item' : '' }}"><a href="/contact" accesskey="5" title="">Contact</a></li>
+                <nav>
+                    <h1 class="title has-text-centered">Welcome to Amanda's Blog!</h1>
+                    <ul class="level-right">
+                        <li class="level-item {{ Request::path() === '/' ? 'current_page_item' : '' }}"><a href="/" accesskey="1" title="">Home</a></li>
+                        <li class="level-item {{ Request::path() === 'posts' ? 'current_page_item' : '' }}"><a href="/posts" accesskey="2" title="">Posts</a></li>
+                        <li class="level-item {{ Request::path() === 'articles' ? 'current_page_item' : '' }}"><a href="/articles" accesskey="3" title="">Articles</a></li>
+                        <li class="level-item {{ Request::path() === '/' ? 'current_page_item' : '' }}"><a href="#" accesskey="4" title="">About Me</a></li>
+                        <li class="level-item {{ Request::path() === 'contact' ? 'current_page_item' : '' }}"><a href="/contact" accesskey="5" title="">Contact</a></li>
                     </ul>
-                </div>
+                </nav>        
             </div>
         </div>
-    </div>
     </section>
             @yield ('content')
     </body>
