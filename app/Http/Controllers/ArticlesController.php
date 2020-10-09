@@ -32,7 +32,10 @@ class ArticlesController extends Controller
     public function create()
     {
         //Shows a view to create a new resource
-        return view('articles.create');
+        return view('articles.create', [
+            //retrieve all tags from the db and hand to this view
+            'tags' => Tag::all()
+        ]);
         
     }
 
@@ -43,8 +46,21 @@ class ArticlesController extends Controller
         //short way to inline validation and create request
         //even further since this same validation is done for the update method, 
         //we can make a function to simplify the code
-        Article::create($this->validateArticle());
+        // Article::create($this->validateArticle());
 
+
+        //need to validate data first before automatically sending to database due to tags being validated now
+        $this->validateArticle();
+        //then when creating a new article, send through the parameters required
+        $article = new Article(request(['title','excerpt','body']));
+        $article->user_id = 1; // auth()->id()
+        $article->save();
+
+        //can add logic here to only attach tags when tags are in the request but this will post null either way if nothing is sent through
+        $article->tags()->attach(request('tags'));
+
+        //redirect user to articles index
+        return redirect(route('articles.index'));
         //validate the data coming through is there
         // request()->validate([
         //     'title' => 'required',
@@ -70,8 +86,7 @@ class ArticlesController extends Controller
         // //save this article to the database
         // $article->save();
 
-        //redirect user to articles index
-        return redirect(route('articles.index'));
+        
 
         //use this funtion to ensure that we are receiving all the information we need before we persist to the database
         // dump(request()->all());
@@ -126,7 +141,8 @@ class ArticlesController extends Controller
         return request()->validate([
             'title' => 'required',
             'excerpt' => 'required',
-            'body' => 'required'
+            'body' => 'required',
+            'tags' => 'exists:tags,id'
         ]);
     }
 }
