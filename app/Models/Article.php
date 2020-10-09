@@ -29,7 +29,7 @@ class Article extends Model
     }
     public function tags()
     {
-        return $this->belongsToMany(Tag::class);
+        return $this->belongsToMany(Tag::class)->withTimestamps();
 
         //an article has many tags ex: label an article with (work, php, laravel)
         //does a tag belong to an article? Not quite
