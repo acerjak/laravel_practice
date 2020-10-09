@@ -3,7 +3,7 @@
 @section('content')
     <div>
         <div class="container">
-            <h1>NEW ARTICLE</h1>
+            <h1 class="title">NEW ARTICLE</h1>
 
             <form method="POST" action="/articles">
             <!-- prevents malicious users on other servers from faking form requests on your server -->
@@ -62,14 +62,16 @@
                 <div class="field">
                     <label class="label" for="body">Tags</label>
                     
-                    <div class="control">
+                    <div class="control select is-multiple">
+                        <!-- putting the brackett after the tags indicates this will be an array of tag id's -->
+                        <!-- multiple following the name will result in being able to select multiple options -->
                         <select
                             name="tags[]"
+                            multiple
                             >
                             @foreach ( $tags as $tag )
                                 <option
-                                    value="{{ $tag->id }}"
-                                >{{ $tag->name }}</option>
+                                    value="{{ $tag->id }}">{{ $tag->name }}</option>
                             @endforeach
                         </select>
 
@@ -82,7 +84,7 @@
 
                 <div class="field">
                     <div class="control">
-                        <button class="button" type="submit">Submit</button>
+                        <button class="button is-link" type="submit">Submit</button>
                     </div>
                 </div>
 
