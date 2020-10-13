@@ -5,9 +5,9 @@
 <div class="tile is-ancestor">
   <div class="tile is-vertical is-8">
     <div class="tile">
-      <div class="tile is-parent is-vertical">
+      <div class="tile is-parent is-vertical ml-3">
         <article class="tile is-child notification is-primary">
-          <p class="title">Vertical...</p>
+          <p class="title ">Vertical...</p>
           <p class="subtitle">Top tile</p>
         </article>
         <article class="tile is-child notification is-warning">
@@ -24,7 +24,7 @@
         </article>
       </div>
     </div>
-    <div class="tile is-parent">
+    <div class="tile is-parent ml-3">
       <article class="tile is-child notification is-danger">
         <p class="title">Wide tile</p>
         <p class="subtitle">Aligned with the right tile</p>
@@ -34,7 +34,7 @@
       </article>
     </div>
   </div>
-  <div class="tile is-parent">
+  <div class="tile is-parent mr-3">
     <article class="tile is-child notification is-success">
       <div class="content">
         <p class="title">Recent Articles</p>
