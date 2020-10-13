@@ -1,6 +1,7 @@
 @extends ('layout')
 
 @section ('content')
+<div class="container is-centered">
 
 <h2 class="is-child notification is-info title has-text-centered mx-6">Index</h2>
 <div class="tile is-parent is-vertical m-5">
@@ -14,5 +15,5 @@
                 <p>No relevant articles yet!</p>
             @endforelse
 </div>
-
+</div>
 @endsection
