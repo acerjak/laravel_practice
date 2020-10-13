@@ -41,7 +41,7 @@
                     </div>
                 </section>
     </section>
-    <div class="wrapper">
+    <div class="wrapper m-5">
         <article class="notification is-danger">
                 <h2 class="title">{{ $article->title }}</h2>
                 <p class="content">{{ $article->body }}</p>
