@@ -33,6 +33,9 @@
                 position: relative;
                 padding-top: 42px;
             }
+            .hero {
+                border-radius: 5px;
+            }
         </style>
     </head>
     <body class="antialiased">        
@@ -50,7 +53,7 @@
                 </nav> 
                 <section class="hero is-dark is-bold">
                     <div class="hero-body">
-                        <h1 class="title has-text-centered ">Welcome to Amanda's Blog!</h1>
+                        <h1 class="title has-text-centered hero">Welcome to Amanda's Blog!</h1>
                     </div>
                 </section>
     </section>
