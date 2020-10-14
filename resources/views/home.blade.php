@@ -21,7 +21,8 @@
       <div class="tile is-parent">
         <article class="tile is-child notification is-info">
           <figure class="image is-4by3">
-            <img class="ml-2" src="https://www.trees.com/sites/default/files/field/image/types-of-yellow-flowers.jpg" alt="sunflower">
+            <img class="ml-2 mt-5" src="https://www.trees.com/sites/default/files/field/image/types-of-yellow-flowers.jpg" alt="sunflower">
+            <p class="subtitle sunflower-tile-text">2020</p>
           </figure>
         </article>
       </div>
