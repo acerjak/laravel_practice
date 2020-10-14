@@ -5,14 +5,14 @@
 <div class="tile is-ancestor">
   <div class="tile is-vertical is-8">
     <div class="tile">
-      <div class="tile is-parent is-vertical ml-3">
+      <div class="tile is-parent is-vertical ml-5">
         <article class="tile is-child notification is-primary">
-          <p class="title ">Vertical...</p>
-          <p class="subtitle">Top tile</p>
+          <figure class="image is-6by3">
+            <img class="ml-2" src="https://marvel-b1-cdn.bc0a.com/f00000000139987/www.gardeners.com/on/demandware.static/-/Library-Sites-SharedLibrary/default/dwb5dc078e/Articles/Gardening/Hero_Thumbnail/5663-zinnia-orange.jpg" alt="Zinnias">
+          </figure>
         </article>
         <article class="tile is-child notification is-warning">
           <p class="title">...tiles</p>
-          <p class="subtitle">Bottom tile</p>
         </article>
       </div>
       <div class="tile is-parent">
