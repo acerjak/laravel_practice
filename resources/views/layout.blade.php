@@ -10,6 +10,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
         <!-- CDN for Bulma Stylesheet -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+        <!-- stylesheet for custom styles -->
+        <link rel="stylesheet" type="text/css" href="{{ asset('path/css/style.css') }}" >
 
         <!-- Styles -->
         <style>
@@ -19,6 +21,12 @@
         <style>
             body {
                 font-family: 'Nunito';
+            }
+            .quote {
+                font-style: italic;
+            }
+            .quote-author{
+                float: right;
             }
         </style>
     </head>
