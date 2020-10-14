@@ -3,3 +3,7 @@
 @tailwind components;
 
 @tailwind utilities;
+
+.quote {
+    font-style: italic;
+}
