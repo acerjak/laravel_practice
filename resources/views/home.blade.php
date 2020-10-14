@@ -27,7 +27,7 @@
         </article>
       </div>
     </div>
-    <div class="tile is-parent ml-3">
+    <div class="tile is-parent ml-5">
       <article class="tile is-child notification is-danger">
         <p class="title">Wide tile</p>
         <p class="subtitle">Aligned with the right tile</p>
@@ -37,7 +37,7 @@
       </article>
     </div>
   </div>
-  <div class="tile is-parent mr-3">
+  <div class="tile is-parent mr-5">
     <article class="tile is-child notification is-success">
       <div class="content">
         <p class="title">Recent Articles</p>
