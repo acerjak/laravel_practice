@@ -19,7 +19,7 @@
         <article class="tile is-child notification is-info">
           <p class="title">Middle tile</p>
           <figure class="image is-4by3">
-            <img src="https://bulma.io/images/placeholders/640x480.png">
+            <img src="https://www.trees.com/sites/default/files/field/image/types-of-yellow-flowers.jpg" alt="sunflower">
           </figure>
         </article>
       </div>
