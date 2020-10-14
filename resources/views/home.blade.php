@@ -17,9 +17,8 @@
       </div>
       <div class="tile is-parent">
         <article class="tile is-child notification is-info">
-          <p class="title">Middle tile</p>
           <figure class="image is-4by3">
-            <img src="https://www.trees.com/sites/default/files/field/image/types-of-yellow-flowers.jpg" alt="sunflower">
+            <img class="ml-2" src="https://www.trees.com/sites/default/files/field/image/types-of-yellow-flowers.jpg" alt="sunflower">
           </figure>
         </article>
       </div>
