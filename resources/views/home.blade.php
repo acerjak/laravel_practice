@@ -12,7 +12,10 @@
           </figure>
         </article>
         <article class="tile is-child notification is-warning">
-          <p class="title">...tiles</p>
+          <p class="title"><span class="quote">“A flower does not think of competing with the flower next to it. It just blooms.”</span>
+            <br>
+            <span class="quote-author">– Zen Shin</span>
+          </p>
         </article>
       </div>
       <div class="tile is-parent">
