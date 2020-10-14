@@ -25,8 +25,13 @@
             .quote {
                 font-style: italic;
             }
-            .quote-author{
+            .quote-author {
                 float: right;
+            }
+            .sunflower-tile-text {
+                text-align: center;
+                position: relative;
+                padding-top: 42px;
             }
         </style>
     </head>
