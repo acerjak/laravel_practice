@@ -19,7 +19,7 @@
         </article>
       </div>
       <div class="tile is-parent">
-        <article class="tile is-child notification is-info">
+        <article class="tile is-child notification sunflower-tile">
           <figure class="image is-4by3">
             <img class="ml-2 mt-5" src="https://www.trees.com/sites/default/files/field/image/types-of-yellow-flowers.jpg" alt="sunflower">
             <p class="subtitle sunflower-tile-text">2020</p>
@@ -28,7 +28,7 @@
       </div>
     </div>
     <div class="tile is-parent ml-5">
-      <article class="tile is-child notification is-danger">
+      <article class="tile is-child notification base-tile is-info">
         <p class="title">Wide tile</p>
         <p class="subtitle">Aligned with the right tile</p>
         <div class="content">
