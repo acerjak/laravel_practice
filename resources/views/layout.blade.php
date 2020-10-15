@@ -45,6 +45,9 @@
                 color: white;
                 font-weight: 900;
             }
+            .top-tile {
+                background-color: #81bcf7;
+            }
         </style>
     </head>
     <body class="antialiased">        
