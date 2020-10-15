@@ -36,6 +36,9 @@
             .hero {
                 border-radius: 5px;
             }
+            .article-column {
+                background-color: #7e36c2;
+            }
         </style>
     </head>
     <body class="antialiased">        
