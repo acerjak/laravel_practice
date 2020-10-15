@@ -38,7 +38,7 @@
     </div>
   </div>
   <div class="tile is-parent mr-5">
-    <article class="tile is-child notification is-success">
+    <article class="tile is-child notification article-column">
       <div class="content">
         <p class="title">Recent Articles</p>
         <div class="content">
