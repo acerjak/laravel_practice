@@ -37,7 +37,13 @@
                 border-radius: 5px;
             }
             .article-column {
-                background-color: #7e36c2;
+                background-color: #c7a1f0;
+                color: white;
+            }
+            .sunflower-tile {
+                background-color: #7769e0;
+                color: white;
+                font-weight: 900;
             }
         </style>
     </head>
